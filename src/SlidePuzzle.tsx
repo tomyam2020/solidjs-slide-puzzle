@@ -1,4 +1,3 @@
-// src/SlidePuzzle.tsx
 import { createSignal } from 'solid-js';
 import { For } from 'solid-js';
 
@@ -49,16 +48,9 @@ const SlidePuzzle = () => {
         {(tile, index) => (
           <div
             onClick={() => tile !== null && moveTile(index())}
-            style={{
-              width: '100px',
-              height: '100px',
-              display: 'flex',
-              'align-items': 'center',
-              'justify-content': 'center',
-              'background-color': tile === null ? '#ccc' : '#f0a',
-              'font-size': '24px',
-              cursor: tile === null ? 'default' : 'pointer',
-            }}
+            class={`w-24 h-24 flex items-center justify-center 
+            ${tile === null ? 'bg-gray-300 cursor-default' : 'bg-pink-400 cursor-pointer'}
+            text-2xl`}
           >
             {tile}
           </div>

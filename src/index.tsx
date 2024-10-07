@@ -1,12 +1,12 @@
 import { render } from 'solid-js/web';
 import SlidePuzzle from './SlidePuzzle';
+import './index.css';
 
 const root = document.getElementById('root');
 
 const App = () => {
   return (
-    <div style={{ 'text-align': 'center', margin: '50px' }}>
-      <h1>スライドパズル</h1>
+    <div class='m-6'>
       <SlidePuzzle />
     </div>
   );
